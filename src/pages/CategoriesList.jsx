@@ -151,6 +151,8 @@ const CategoriesList = () => {
                 onEdit={() => navigate(`/edit-category/${cat._id}`)}
                 onDelete={() => handleRemoveCategory(cat._id)}
                 canManage={canManage}
+                isEnable={cat.isEnable}
+                isPremium={cat.isPremium}
               />
             ))}
           </div>

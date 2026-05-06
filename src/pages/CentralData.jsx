@@ -110,6 +110,8 @@ const CentralData = () => {
                 onClick={() => navigate(`/central-data/assets/${cat._id}`)}
                 canManage={true}
                 canHardDelete={true}
+                isEnable={cat.isEnable}
+                isPremium={cat.isPremium}
               />
             </div>
           ))}

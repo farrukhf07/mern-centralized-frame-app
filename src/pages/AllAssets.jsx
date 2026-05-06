@@ -132,6 +132,8 @@ const AllAssets = () => {
                 tag={asset.tag}
                 width={asset.width}
                 height={asset.height}
+                isEnable={asset.isEnable}
+                isPremium={asset.isPremium}
               />
             </div>
           ))}

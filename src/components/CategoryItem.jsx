@@ -13,6 +13,8 @@ const CategoryItem = ({
   width,
   height,
   isAddMode,
+  isEnable = true,
+  isPremium = false,
   canManage = true,
   canHardDelete = false,
   hardDeleteLoading = false,
@@ -77,7 +79,38 @@ const CategoryItem = ({
         boxShadow: isHovered ? "0 18px 36px rgba(0,0,0,0.12)" : "none"
       }}
     >
-      
+      {/* Disabled Badge */}
+      {!isEnable && (
+        <span 
+          className="position-absolute top-0 start-0 badge bg-danger shadow-sm"
+          style={{
+            zIndex: 10,
+            fontSize: "0.75rem",
+            padding: "0.4rem 0.6rem",
+            borderRadius: "0 0 0.25rem 0",
+            fontWeight: "600",
+            letterSpacing: "0.5px"
+          }}
+        >
+          Disabled
+        </span>
+      )}
+
+      {/* Premium Badge */}
+      {isPremium && (
+        <span 
+          className="position-absolute top-0 end-0 d-flex align-items-center justify-content-center shadow-sm"
+          style={{
+            zIndex: 10,
+            width: "32px",
+            height: "32px",
+            background: "rgb(79, 70, 229)",
+            borderRadius: "0 0 0 8px"
+          }}
+        >
+          <span style={{ color: "white", fontSize: "16px" }}>✦</span>
+        </span>
+      )}
       {/* Image / Placeholder on Top */}
       <div
         style={{overflow: 'hidden',flexShrink: 0, position: 'relative' }}>

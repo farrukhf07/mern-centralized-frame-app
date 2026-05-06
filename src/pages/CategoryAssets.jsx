@@ -134,6 +134,8 @@ const CategoryAssets = () => {
                 canHardDelete={true}
                 asset={true}
                 tag={asset.tag}
+                isEnable={asset.isEnable}
+                isPremium={asset.isPremium}
               />
             </div>
           ))}
