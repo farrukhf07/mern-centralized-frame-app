@@ -153,7 +153,6 @@ const ContactUs = () => {
                     value={formData.phone}
                     onChange={handleChange}
                     placeholder="+1 (555) 000-0000"
-                    required
                   />
                 </div>
               </div>
@@ -168,7 +167,6 @@ const ContactUs = () => {
                   value={formData.message}
                   onChange={handleChange}
                   placeholder="How can we help you?"
-                  required
                 ></textarea>
               </div>
 
