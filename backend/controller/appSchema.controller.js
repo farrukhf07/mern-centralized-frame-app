@@ -1,5 +1,5 @@
 const AppSchema = require('../models/AppSchema');
-
+const crypto = require('crypto');
 
 // create new APP
 exports.createApp = async (req, res) => {
@@ -25,6 +25,8 @@ exports.createApp = async (req, res) => {
 
         if (bundleId && bundleId.trim() !== "") {
             payload.bundleId = bundleId.trim();
+        } else{
+            payload.bundleId = crypto.randomBytes(8).toString('hex');
         }
 
         const app = await AppSchema.create(payload);
