@@ -1012,7 +1012,12 @@ body::before {
 }
 
 .main-content {
-  padding-top: 64px; /* Matches navbar height */
+  padding-top: 64px; /* Matches navbar height (legacy) */
+}
+
+/* Sidebar layout overrides */
+.sidebar-layout .main-content {
+  padding-top: 0;
 }
 
 @media (max-width: 768px) {
