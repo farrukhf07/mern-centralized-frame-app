@@ -20,6 +20,7 @@ import ContactUs from './pages/ContactUs';
 import CentralData from './pages/CentralData';
 import CategoryAssets from './pages/CategoryAssets';
 import AllAssets from './pages/AllAssets';
+import ContactRequests from './pages/ContactRequests';
 import Layout from './components/Layout';
 
 function App() {
@@ -134,6 +135,14 @@ function App() {
               element={
                 <ProtectedRoute adminOnly>
                   <UpdateUser />
+                </ProtectedRoute>
+              }
+            />
+            <Route
+              path="/contact-requests"
+              element={
+                <ProtectedRoute adminOnly>
+                  <ContactRequests />
                 </ProtectedRoute>
               }
             />

@@ -38,6 +38,24 @@ const IconMail = () => (
   </svg>
 );
 
+const IconChatRightText  = () => (
+    <svg
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="2"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+  >
+    {/* Chat bubble */}
+    <path d="M4 5h16a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2H9l-5 4v-4H4a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2z" />
+
+    {/* Text lines */}
+    <path d="M8 10h8" />
+    <path d="M8 14h5" />
+  </svg>
+);
+
 const IconLogout = () => (
   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round">
     <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4" />
@@ -117,6 +135,7 @@ const Sidebar = ({ onCollapseChange }) => {
     ...(admin ? [
       { to: '/central-data', label: 'Central Data', icon: <IconDatabase /> },
       { to: '/users', label: 'Manage Users', icon: <IconUsers /> },
+      { to: '/contact-requests', label: 'Contact Requests', icon: <IconChatRightText  /> },
     ] : []),
     { to: '/contactUs', label: 'Contact Us', icon: <IconMail /> },
   ];

@@ -88,7 +88,7 @@ const ContactRequestsTable = () => {
   return (
     <div className="mt-5 fade-in">
       <div className="page-header mb-4">
-        <h1 style={{ color: 'var(--text-primary)' }}>📩 Contact Requests</h1>
+        <h1 style={{ color: 'var(--text-primary)' }}>Contact Requests</h1>
         <p className="subtitle" style={{ color: 'var(--text-secondary)' }}>Review and manage incoming inquiries from users</p>
       </div>
 

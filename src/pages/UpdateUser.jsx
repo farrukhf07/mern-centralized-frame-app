@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import { API_ENDPOINTS } from '../apiEndpoints/endpoints';
 import axiosInstance from '../api/axiosInstance';
 import { MANAGEABLE_ROLES, ROLES } from '../constants/roles';
-import ContactRequestsTable from '../components/ContactRequestsTable';
+
 import { isadmin } from '../utils/permissions';
 import { useAuth } from '../context/AuthContext';
 import SearchBar from '../components/SearchBar';
@@ -153,7 +153,7 @@ const ManageUsers = () => {
       <div className="container-fluid">
         <div className="page-header d-flex justify-content-between align-items-start">
           <div>
-            <h1>👥 User Management</h1>
+            <h1>User Management</h1>
             <p className="subtitle">admin-only access to user roles and application assignments</p>
           </div>
         </div>
@@ -212,8 +212,7 @@ const ManageUsers = () => {
           </div>
         )}
 
-        {/* Contact Requests Section */}
-        <ContactRequestsTable />
+
       </div>
 
       {/* Edit User Modal */}

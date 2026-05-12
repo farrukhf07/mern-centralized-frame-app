@@ -82,7 +82,7 @@ const ContactUs = () => {
         <div className="row justify-content-center">
           <div className="col-12 col-md-10 col-lg-8 col-xl-6">
             <div className="page-header text-center">
-              <h1>📩 Contact Us</h1>
+              <h1>Contact Us</h1>
               <p className="subtitle">Send us a message and we'll get back to you shortly.</p>
             </div>
 
