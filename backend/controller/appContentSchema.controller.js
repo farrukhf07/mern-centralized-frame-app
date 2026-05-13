@@ -4,6 +4,7 @@ const Asset = require('../models/Asset');
 const sharp = require('sharp');
 const path = require('path');
 const fs = require('fs/promises');
+const { updateBulkCoordinates } = require('./asset.controller');
 
 exports.getAppConfig = async (req, res) => {
     try {
@@ -539,6 +540,13 @@ exports.createAssetAndLinkToApp = async (req, res) => {
                 success: false,
                 message: "AppConfig or category mapping not found"
             });
+        }
+
+        // If Python processing generated coordinates, update them in bulk
+        if (req.body.pythonCoordinates && req.body.pythonCoordinates.length > 0) {
+            req.body.data = req.body.pythonCoordinates;
+            // Since updateBulkCoordinates sends its own response, we return its result
+            return await updateBulkCoordinates(req, res);
         }
 
         return res.status(201).json({

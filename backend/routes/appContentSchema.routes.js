@@ -6,6 +6,7 @@ const adminOnly = require('../middleware/adminOnly');
 
 const uploadCategory = require('../multer/uplaodCategory.multer');
 const uploadAsset = require('../multer/uploadAsset.multer');
+const processFramesMiddleware = require('../middleware/processFrames.middleware');
 
 /**
  * GET /api/appConfig/view/:appId
@@ -30,6 +31,7 @@ router.post(
 router.post(
     '/createAsset',
     uploadAsset,
+    processFramesMiddleware,
     AppContentController.createAssetAndLinkToApp
 );
 
