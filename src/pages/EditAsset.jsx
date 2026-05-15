@@ -176,22 +176,8 @@ const EditAsset = () => {
         <div className="d-flex justify-content-center">
           {/* Form */}
           <form className="glass-form" onSubmit={handleSubmit}>
-            
-            <div className="row g-4 mb-4">
-              {/* Category Name (Disabled) */}
-              <div className="col-md-6">
-                <label className="form-label">Category Name</label>
-                <input
-                  type="text"
-                  className="form-control"
-                  name="categoryName"
-                  value={form.categoryName}
-                  disabled
-                />
-              </div>
-
               {/* Asset Name */}
-              <div className="col-md-6">
+              <div className="mb-4">
                 <label className="form-label">Asset Name</label>
                 <input
                   type="text"
@@ -202,7 +188,6 @@ const EditAsset = () => {
                   placeholder="Enter asset name"
                 />
               </div>
-            </div>
 
             {/* Image Upload */}
             <div className="mb-4">

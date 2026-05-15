@@ -13,7 +13,7 @@ const AppsList = () => {
   const [error, setError] = useState(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [editingApp, setEditingApp] = useState(null);
-  const [formData, setFormData] = useState({ name: '', type: '', status: 'active', appurl: '' });
+  const [formData, setFormData] = useState({ name: '', type: '', bundleId: '',status: 'active' });
   const [submitting, setSubmitting] = useState(false);
 
   const navigate = useNavigate();
@@ -49,7 +49,7 @@ const AppsList = () => {
         name: app.name || '',
         type: app.type || '',
         status: app.status || 'active',
-        appurl: app.appurl || ''
+        bundleId: app.bundleId || '',
       });
     } else {
       setEditingApp(null);
